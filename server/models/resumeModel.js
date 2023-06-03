@@ -6,9 +6,11 @@ const resumeSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    educationalBackground: {
-        type: String,
-    },
+    educationalBackground: [{
+        educationTitle: String,
+        educationInst:String,
+        cgpa:String
+    }],
     skills: {
         type: [],
     },
@@ -34,9 +36,16 @@ const resumeSchema = new mongoose.Schema({
         {
             commenter: mongoose.Types.ObjectId,
             comment: String,
-            commentedAt: Date.now
+            commentedAt: {
+                type: Date,
+                default: Date.now
+            }
         }
     ],
 
 },
     { timestamps: true })
+
+const Resume = mongoose.model('Resume', resumeSchema)
+
+export default Resume
