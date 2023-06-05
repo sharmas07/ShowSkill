@@ -28,13 +28,11 @@ const resumeSchema = new mongoose.Schema({
         address: String
     },
     endorsements: [
-        {
-            endorser: mongoose.Types.ObjectId,
-        }
+       
     ],
     comments: [
         {
-            commenter: mongoose.Types.ObjectId,
+            commenter: String,
             comment: String,
             commentedAt: {
                 type: Date,
