@@ -1,15 +1,20 @@
 import {React, useState} from 'react'
 import { Link } from 'react-router-dom';
 
+import { useDispatch, useSelector } from 'react-redux';
+import { login } from '../../../redux/reducers/loginReducer';
+
 const SignIn = () => {
-    // form state variables
-    const [email, setEmail] = useState("");
+    const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [showPassword, setShowPassword] = useState(false);
-  
-  
-    const handleEmailChange = (e) => {
-      setEmail(e.target.value);
+    
+    const dispatch = useDispatch();
+    const loading = useSelector((state) => state.login.loading);
+    const error = useSelector((state) => state.login.error);
+
+    const handleUsernameChange = (e) => {
+      setUsername(e.target.value);
     };
   
     const handlePasswordChange = (e) => {
@@ -19,21 +24,23 @@ const SignIn = () => {
     const handleShowPassword = () => {
       setShowPassword(!showPassword);
     };
-  
+
     const handleSubmit = (e) => {
       e.preventDefault();
-      // Handle form submission here TODO
-      console.log({
-        email,
+      const credentials = {
+        username,
         password
-      });
+      }
+      console.log(credentials)
+      // call redux here
+      dispatch(login(credentials))
     };   
   
     return (
       <form className="signup-form" onSubmit={handleSubmit}>
         <h2>Sign In</h2>
        
-          <input type="email" value={email} onChange={handleEmailChange} placeholder='Email'/>
+          <input type="username" value={username} onChange={handleUsernameChange} placeholder='Username'/>
        
        <div className="password__container">
        <input type={showPassword ? "text" : "password"} value={password} onChange={handlePasswordChange} placeholder='password'/>
