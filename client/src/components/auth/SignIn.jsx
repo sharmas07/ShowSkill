@@ -1,5 +1,4 @@
 import {React, useState} from 'react'
-import '../styles/SignUp.css'
 import { Link } from 'react-router-dom';
 
 const SignIn = () => {

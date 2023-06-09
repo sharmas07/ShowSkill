@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import './App.css'
-import Footer from './components/Footer'
-import Home from './components/Home'
-import Navbar from './components/Navbar'
+import Footer from './components/common/Footer'
+import Home from './components/common/Home'
+import Navbar from './components/common/Navbar'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
-import SignUp from './components/SignUp'
-import SignIn from './components/SignIn'
+import SignUp from './components/auth/SignUp'
+import SignIn from './components/auth/SignIn'
 import StudentProfileView from './features/student/StudentProfileView'
 
 function App() {

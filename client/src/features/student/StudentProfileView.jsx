@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../styles/StudentProfileView.css';
+import '../../assets/styles/StudentProfileView.css';
 // import userimage from '../../assets/user-pic.png'
 
 const StudentProfileView = () => {

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import "../styles/Navbar.css";
-import logo from "../assets/logo.png";
-import hamburger_btn from "../assets/hamburger-btn.png";
-import close from "../assets/close.png";
+import "../../assets/styles/Navbar.css";
+import logo from "../../assets/images/logo.png";
+import hamburger_btn from "../../assets/images/hamburger-btn.png";
+import close from "../../assets/images/close.png";
 // import userpic from "../assets/user-pic.png";
 import {Link} from 'react-router-dom'
 
