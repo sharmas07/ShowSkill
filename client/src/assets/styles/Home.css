@@ -4,55 +4,116 @@
     align-items: center;
     justify-content: center;
     height: 87vh;
-}
-h1 {
+  }
+  h1 {
     font-size: 3rem;
     margin-bottom: 2rem;
-    text-align: center;
-    color: #fff;
+    text-align: start;
+    color: #e97e7e;
     line-height: 1.5;
-}
-.button__container {
+    font-weight: 900;
+  }
+  .button__container {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
-}
-.button {
-    padding: 1rem 2rem;
+  }
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: 3rem;
+    width: 100%;
+  }
+  
+  .left {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+  }
+  
+  .btnLeft {
+    padding: 0.8rem 1.5rem 0.8rem 1.5rem;
+    background-color: #25262b;
     border: none;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #ffffff;
-    border-radius: 0.5rem;
-    margin: 0 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 5px rgb(68, 113, 235), 0 0 10px rgb(55, 128, 245);
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica,
+      Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+    font-size: 1rem;
+    font-weight: 900;
+    display: flex;
+    color: azure;
+    align-items: flex-start;
+    justify-content: center;
     cursor: pointer;
-}
-.student {
-    background-color: #000;
-}
-.recruiter {
-    background-color: #2196f3;
-}
-.home__title{
-    width: 30rem;
-}
-@media only screen and (max-width: 600px) {
-    .home__title{
-        width: auto;
+  }
+  
+  .btnLeft:hover {
+    box-shadow: 0 0 5px rgb(29, 30, 32), 0 0 10px rgb(57, 58, 60);
+  }
+  
+  .btnRight {
+    padding: 0.8rem 1.5rem 0.8rem 1.5rem;
+    background-image: linear-gradient(52deg, #1c7ed6 3%, #22b8cf 97%);
+    border-radius: 1rem;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica,
+      Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+    font-size: 1rem;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    color: aliceblue;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 0 5px rgb(197, 137, 240), 0 0 10px rgb(61, 128, 236);
+  }
+  
+  .btnRight:hover {
+    box-shadow: 0 0 5px rgb(28, 96, 232), 0 0 10px rgb(31, 103, 248);
+  }
+  
+  .bg {
+    width: 650px;
+  }
+  
+  .btn__div {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .home__title {
+      width: auto;
     }
     h1 {
-        font-size: 2rem;
+      font-size: 2rem;
     }
-    .button {
-        padding: 0.75rem 1.5rem;
-        font-size: 1.25rem;
+    .content {
+      flex-direction: column;
+      gap: 5rem;
     }
-    .button__container {
-        flex-direction: column;
+    .bg {
+      width: 350px;
     }
-    .student {
-        margin-bottom: 1rem;
+    .btn {
+      width: 100px;
     }
-}
+  
+    .left {
+      align-items: center;
+    }
+    .left > h1 {
+      text-align: center;
+      padding: 1rem;
+    }
+  }
+  
